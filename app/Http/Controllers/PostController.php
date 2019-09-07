@@ -8,6 +8,12 @@ class PostController extends Controller
 {
     public function index()
     {
-        return view('post.home');
+        $title = "投稿一覧";
+        return view('post.home', ['title' => $title]);
+    }
+
+    public function add()
+    {
+        return view('post.post');
     }
 }

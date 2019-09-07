@@ -3,12 +3,19 @@
 
 # Laravel  
 ## Execution command  
-
 ### local server start
 ```command line
 $ php artisan serve  
 ```
 http://127.0.0.1:8000/
+
+### make Controller  
+```commandline  
+$ php artisan make:controller <ControllerName>
+```
+
+### make common parts  
+[参考](https://qiita.com/kotsuban-teikin/items/f977c4edcb85d7e9faff)  
 
 # Bootstrap4.3.1  
 ## Setup  
