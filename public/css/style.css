@@ -1,0 +1,12 @@
+@charset "utf-8";
+/* html, body {
+  
+} */
+
+.under_header {
+  margin-top: 6.5vh;
+}
+
+.no_margin{
+  margin: 0;
+}
