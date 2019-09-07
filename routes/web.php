@@ -16,9 +16,12 @@ Route::get('/', function () {
 });
 
 # テスト
-Route::get('hello/{id}', function ($id){
+Route::get('hello/{id}', function ($id) {
     return $id;
 });
 
-# こっから下
-Route::get('user/','UserController@index');
+# Post
+Route::get('post/', 'PostController@index');
+
+# User
+Route::get('user/', 'UserController@index');
