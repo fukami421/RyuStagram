@@ -13,5 +13,8 @@
     </head>
     <body>
       <div>{{$name}}</div>
+      <div class="alert alert-primary" role="alert">
+        A simple primary alert—check it out!
+      </div>
     </body>
 </html>
