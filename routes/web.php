@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+# テスト
+Route::get('hello/{id}', function ($id){
+    return $id;
+});
+
+# こっから下
+Route::get('user/','UserController@index');
