@@ -26,3 +26,4 @@ Route::get('upload/', 'PostController@add');
 
 # User
 Route::get('user/', 'UserController@index');
+Route::get('mypage/', 'UserController@show_mypage');

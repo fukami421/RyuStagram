@@ -14,4 +14,9 @@ class UserController extends Controller
         // ここでuserビュー「user.blade.php」を呼び出し、データ「name」を渡している。
         return view('user.home', ['name' => $name]);
     }
+
+    public function show_mypage()
+    {
+        return view('user.mypage');
+    }
 }

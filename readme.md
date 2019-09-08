@@ -14,6 +14,11 @@ http://127.0.0.1:8000/
 $ php artisan make:controller <ControllerName>
 ```
 
+### make migration file  
+```command line
+$ php artisan make:migration create_users_table
+```
+
 ### make common parts  
 [参考](https://qiita.com/kotsuban-teikin/items/f977c4edcb85d7e9faff)  
 
