@@ -31,7 +31,7 @@
           <a class="nav-link" href="/users">User</a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="/upload">投稿する</a>
+          <a class="nav-link" href="/posts/add">投稿する</a>
         </li>
         <li class="nav-item active">
           <a class="nav-link" href="/mypage">MyPage</a>

@@ -3,11 +3,11 @@
 <div class="alert alert-primary under_header text-center" role="alert">
   ここは投稿をするページだよ
 </div>
-<form>
+<form action='/posts/add' method="post">
   <!-- ファイルアップロード -->
   <div class=" form-group">
     <label>File input</label><br>
-    <input type="file">
+    <input type="file" name='file'>
   </div>
   <!-- 画像の説明 -->
   <div class="form-group">
@@ -16,6 +16,6 @@
   </div>
   {{ csrf_field() }}
   <!-- 送信ボタン -->
-  <button type="submit" class="btn btn-default btn-info">Submit</button>
+  <button type="submit" class="btn btn-default btn-info" value="send">Submit</button>
 </form>
 @endsection

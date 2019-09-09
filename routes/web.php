@@ -21,9 +21,10 @@ Route::get('hello/{id}', function ($id) {
 });
 
 # Post
-Route::get('posts/', 'PostController@index');
-Route::get('upload/', 'PostController@add');
+Route::get('/posts', 'PostController@index');
+Route::get('/posts/add', 'PostController@add');
+Route::post('/posts/add', 'PostController@create');
 
 # User
-Route::get('users/', 'UserController@index');
-Route::get('mypage/', 'UserController@show_mypage');
+Route::get('/users', 'UserController@index');
+Route::get('/mypage', 'UserController@show_mypage');
