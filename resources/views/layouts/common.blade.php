@@ -25,10 +25,10 @@
     <div class="collapse navbar-collapse">
       <ul class="navbar-nav w-100 nav-justified">
         <li class="nav-item active">
-          <a class="nav-link" href="/post">投稿一覧</a>
+          <a class="nav-link" href="/posts">投稿一覧</a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="/user">User</a>
+          <a class="nav-link" href="/users">User</a>
         </li>
         <li class="nav-item active">
           <a class="nav-link" href="/upload">投稿する</a>

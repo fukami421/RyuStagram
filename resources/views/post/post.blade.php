@@ -12,7 +12,7 @@
   <!-- 画像の説明 -->
   <div class="form-group">
     <label>Descrption(任意)</label>
-    <textarea rows="7" cols="10" class="form-control" placeholder="Description" name="description"></textarea>
+    <textarea rows="7" cols="10" class="form-control textarea" placeholder="Description" name="description"></textarea>
   </div>
   {{ csrf_field() }}
   <!-- 送信ボタン -->

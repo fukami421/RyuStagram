@@ -10,3 +10,9 @@
 .no_margin{
   margin: 0;
 }
+
+textarea {
+  resize: none;
+  /* width:100px;
+  height:500px; */
+}
