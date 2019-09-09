@@ -3,7 +3,7 @@
 <div class="alert alert-primary under_header text-center" role="alert">
   ここは投稿をするページだよ
 </div>
-<form action='/posts/add' method="post">
+<form action='/posts/add' enctype="multipart/form-data" method="post">
   <!-- ファイルアップロード -->
   <div class=" form-group">
     <label>File input</label><br>
