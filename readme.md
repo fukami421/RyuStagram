@@ -19,6 +19,11 @@ $ php artisan make:controller <ControllerName>
 $ php artisan make:migration create_users_table
 ```
 
+### make seeder file  
+```command line  
+$ php artisan make:seeder UsersTableSeeder
+```  
+
 ### create & insert table
 ```command line  
 # migrate  
