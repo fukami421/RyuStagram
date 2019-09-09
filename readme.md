@@ -19,6 +19,13 @@ $ php artisan make:controller <ControllerName>
 $ php artisan make:migration create_users_table
 ```
 
+### create & insert table
+```command line  
+# migrate  
+$ php artisan migrate  
+$ php artisan db:seed  
+```
+
 ### make common parts  
 [参考](https://qiita.com/kotsuban-teikin/items/f977c4edcb85d7e9faff)  
 
