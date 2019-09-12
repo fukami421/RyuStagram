@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Laravel\Socialite\Facades\Socialite;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use App\User;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
@@ -53,7 +55,7 @@ class LoginController extends Controller
             $user = $this->createUserByGoogle($gUser);
         }
         // ログイン処理
-        \Auth::login($user, true);
+        Auth::login($user, true);
         return redirect('/users');
     }
     public function createUserByGoogle($gUser)

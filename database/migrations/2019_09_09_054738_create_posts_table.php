@@ -11,24 +11,24 @@ class CreatePostsTable extends Migration
      *
      * @return void
      */
-    public function up()
-    {
-        Schema::create('posts', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->integer('user_id');
-            $table->string('file');
-            $table->string('description');
-            $table->timestamps();
-        });
-    }
+    // public function up()
+    // {
+    //     Schema::create('posts', function (Blueprint $table) {
+    //         $table->bigIncrements('id');
+    //         $table->integer('user_id');
+    //         $table->string('file');
+    //         $table->string('description');
+    //         $table->timestamps();
+    //     });
+    // }
 
     /**
      * Reverse the migrations.
      *
      * @return void
      */
-    public function down()
-    {
-        Schema::dropIfExists('posts');
-    }
+    // public function down()
+    // {
+    //     Schema::dropIfExists('posts');
+    // }
 }
