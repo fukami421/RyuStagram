@@ -56,7 +56,7 @@ class LoginController extends Controller
         }
         // ログイン処理
         Auth::login($user, true);
-        return redirect('/users');
+        return redirect('/users'); //ログインしたらここにredirect
     }
     public function createUserByGoogle($gUser)
     {
