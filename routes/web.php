@@ -28,3 +28,11 @@ Route::post('/posts/add', 'PostController@create');
 # User
 Route::get('/users', 'UserController@index');
 Route::get('/mypage', 'UserController@show_mypage');
+
+# Auth
+Auth::routes();
+Route::get('login/google', 'Auth\LoginController@redirectToGoogle');
+Route::get('login/google/callback', 'Auth\LoginController@handleGoogleCallback');
+
+# Initial
+Route::get('/home', 'HomeController@index')->name('home');
