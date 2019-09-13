@@ -31,7 +31,7 @@ Route::get('/mypage', 'UserController@show_mypage');
 Route::get('/login', 'Auth\LoginController@index');
 
 # Auth
-Auth::routes();
+// Auth::routes();//ここをコメントアウトするとデフォルトのルーティングではなくなる
 Route::get('login/google', 'Auth\LoginController@redirectToGoogle');
 Route::get('login/google/callback', 'Auth\LoginController@handleGoogleCallback');
 
