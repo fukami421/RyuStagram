@@ -29,6 +29,7 @@ Route::post('/posts/add', 'PostController@create');
 Route::get('/users', 'UserController@index');
 Route::get('/mypage', 'UserController@show_mypage');
 Route::get('/login', 'Auth\LoginController@index');
+Route::get('/logout', 'Auth\LoginController@logout');
 
 # Auth
 // Auth::routes();//ここをコメントアウトするとデフォルトのルーティングではなくなる

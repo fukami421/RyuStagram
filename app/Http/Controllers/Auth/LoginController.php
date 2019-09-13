@@ -73,4 +73,10 @@ class LoginController extends Controller
         ]);
         return $user;
     }
+
+    public function logout()
+    {
+        auth::logout();
+        return redirect('/login');
+    }
 }
