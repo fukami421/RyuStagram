@@ -28,6 +28,7 @@ Route::post('/posts/add', 'PostController@create');
 # User
 Route::get('/users', 'UserController@index');
 Route::get('/mypage', 'UserController@show_mypage');
+Route::get('/login', 'Auth\LoginController@index');
 
 # Auth
 Auth::routes();

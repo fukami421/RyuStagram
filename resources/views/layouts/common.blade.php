@@ -22,22 +22,45 @@
     <!-- Todo
         - 検索バーをつける
       -->
-    <div class="collapse navbar-collapse">
-      <ul class="navbar-nav w-100 nav-justified">
-        <li class="nav-item active">
-          <a class="nav-link" href="/posts">投稿一覧</a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active border-right border-left border-info">
+          <a class="nav-link" href="/posts">投稿一覧 <span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="/users">User</a>
+        <li class="nav-item active border-right border-info">
+          <a class="nav-link" href="/users">User一覧</a>
         </li>
-        <li class="nav-item active">
+        <li class="nav-item active border-right border-info">
           <a class="nav-link" href="/posts/add">投稿する</a>
         </li>
-        <li class="nav-item active">
+        @auth
+        <li class="nav-item active border-right border-info">
           <a class="nav-link" href="/mypage">MyPage</a>
         </li>
+        @endauth
+
+        @guest
+        <li class="nav-item active border-right border-info">
+          <a class="nav-link" href="/login">Login</a>
+        </li>
+        @endguest
+
+        <li class="nav-item dropdown active border-right border-info">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">1</a>
+            <a class="dropdown-item" href="#">2</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">3</a>
+          </div>
+        </li>
       </ul>
-    </div>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+      </form>
   </nav>
   @yield('content')
 </body>
