@@ -30,10 +30,10 @@
         <li class="nav-item active border-right border-info">
           <a class="nav-link" href="/users">User一覧</a>
         </li>
+        @auth
         <li class="nav-item active border-right border-info">
           <a class="nav-link" href="/posts/add">投稿する</a>
         </li>
-        @auth
         <li class="nav-item active border-right border-info">
           <a class="nav-link" href="/mypage">MyPage</a>
         </li>
