@@ -1,8 +1,6 @@
 @charset "utf-8";
-/* html, body {
-  
-} */
 
+/* allpage */
 .under_header {
   margin-top: 6.5vh;
 }
@@ -11,8 +9,54 @@
   margin: 0;
 }
 
+.no_margin_bottom{
+  margin-bottom: 0%;
+}
+
+/* postpage */
 textarea {
-  resize: none;
-  /* width:100px;
-  height:500px; */
+  resize: horizontal;
+  max-width: 75vw;
+  min-width: 75vw;
+}
+
+/* mypage */
+.profile{
+  width: 100%;
+  display:flex;
+}
+
+.avatar{
+  margin-right: 5vw;
+  margin-left: 23vw;
+}
+
+.my_name{
+  padding-left: 0.7vw;
+}
+
+/* users */
+.users_flex{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: flex-start;
+  /* align-self: flex-start; */
+  align-items: center;  /* 子要素をflexboxにより中央(縦方向)に配置する */
+  /* text-align:center; */
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+.user_avatar{
+  width: 20vw;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-bottom: 10vh;
+  text-align:center;
+}
+
+.users{
+  width:100%;
+  margin:0 6.8%;     
 }

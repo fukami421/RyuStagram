@@ -73,7 +73,7 @@ class LoginController extends Controller
     {
         $img = file_get_contents($gUser->avatar_original);
         if ($img !== false) {
-            $file_name = $gUser->id . '.jpg';
+            $file_name = $gUser->id . '.png';
             Storage::put('public/profile_images/' . $file_name, $img);
         } else {
             $file_name = "";
