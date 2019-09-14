@@ -7,6 +7,7 @@ use Laravel\Socialite\Facades\Socialite;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use App\User;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class LoginController extends Controller
 {
@@ -70,10 +71,19 @@ class LoginController extends Controller
     }
     public function createUserByGoogle($gUser)
     {
+        $img = file_get_contents($gUser->avatar_original);
+        if ($img !== false) {
+            $file_name = $gUser->id . '.jpg';
+            Storage::put('public/profile_images/' . $file_name, $img);
+        } else {
+            $file_name = "";
+        }
+
         $user = User::create([
             'name'     => $gUser->name,
             'email'    => $gUser->email,
             'password' => \Hash::make(uniqid()),
+            'avatar'   => $file_name,
         ]);
         return $user;
     }
