@@ -3,14 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Post;
+use App\Models\Post;
+use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
     public function index()
     {
         $title = "投稿一覧";
-        return view('post.home', ['title' => $title]);
+        $posts = Post::All();
+        return view('post.home', ['title' => $title, 'posts' => $posts]);
     }
 
     public function add()
@@ -34,13 +36,15 @@ class PostController extends Controller
                 $request->file->storeAs('/public/posted_files/', $filenameWithExt);
             } //redirect
         } //redirect
-
+        else{
+            return redirect('/posts/add');//error文の表示
+        }
         $post = new Post();
         $form = $request->all();
         unset($form['_token']);
         $post->file = $filenameWithExt;
         $post->description = $request->description;
-        $post->user_id = 1;
+        $post->user_id = Auth::id();
         $post->save();
         return redirect('/posts');
     }

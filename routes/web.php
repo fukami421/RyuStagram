@@ -26,7 +26,8 @@ Route::get('/posts/add', 'PostController@add');
 Route::post('/posts/add', 'PostController@create');
 
 # User
-Route::get('/users', 'UserController@index');
+Route::get('/user/{id}', 'UserController@index');
+Route::get('/users', 'UserController@show_all_users');
 Route::get('/mypage', 'UserController@show_mypage');
 Route::get('/login', 'Auth\LoginController@index');
 Route::get('/logout', 'Auth\LoginController@logout');

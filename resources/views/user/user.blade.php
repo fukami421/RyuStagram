@@ -1,7 +1,7 @@
 @extends('layouts.common')
 @section('content')
 <div class="alert alert-primary under_header text-center no_margin_bottom" role="alert">
-  ここはMyPageを表示するページだよ
+  ここはに{{$user->name}}ついて表示するページだよ
 </div>
 <div class="bg-primary p-sm-4 profile">
   <img class="rounded-circle avatar" width="13%" src="/storage/profile_images/{{$user->avatar}}">
@@ -14,10 +14,5 @@
     <div class="user_name">投稿の説明: {{$post->description}}</div>
   </div>
   @endforeach
-</div>
-<div class="logout">
-  <a href="/logout" class="btn btn-secondary a" role="button">
-    Logout
-  </a>
 </div>
 @endsection

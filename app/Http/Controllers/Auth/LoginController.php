@@ -64,7 +64,7 @@ class LoginController extends Controller
             }
             // ログイン処理
             Auth::login($user, true);
-            return redirect('/users'); //ログインしたらここにredirect
+            return redirect('/posts'); //ログインしたらここにredirect
         } catch (\Exception $e) {
             return redirect('/login');
         }
