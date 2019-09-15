@@ -27,4 +27,11 @@ class Post extends Model
         $post = Post::where('user_id', Auth::id())->get();
         return $post;
     }
+
+    public function getUserId($user_id)
+    {
+        $user = User::where('id', $user_id)->first();
+        $id = $user->id;
+        return $id;
+    }
 }

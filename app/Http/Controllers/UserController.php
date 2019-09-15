@@ -32,4 +32,16 @@ class UserController extends Controller
         $posts = Post::where('user_id', Auth::id())->get();
         return view('user.mypage', ['user' => $user, 'posts' => $posts]);
     }
+
+    public function search(Request $request)
+    {
+        $user = User::where('name', $request->search)->first();
+        if(!is_null($user))
+        {
+            return redirect('/user/'.$user->id);
+        }else
+        {
+            return redirect('/users');
+        }
+    }
 }

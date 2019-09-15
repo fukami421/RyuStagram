@@ -8,7 +8,11 @@
   <div class="posts">
     <img class="post_image" src="/storage/posted_files/{{$post->file}}">
     <!-- $postに含まれるuser_idからuser名を取得しよう -->
-    <div class="user_name">投稿者: {{$post->getUserName($post->user_id)}}</div>
+    <div class="user_name">投稿者:
+      <a href="/user/{{$post->getUserId($post->user_id)}}">
+        {{$post->getUserName($post->user_id)}}
+      </a>
+    </div>
     <div class="user_name">投稿の説明: {{$post->description}}</div>
   </div>
   @endforeach

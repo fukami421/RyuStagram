@@ -6,8 +6,10 @@
 <div class="users_flex">
   @foreach($users as $user)
   <div class="users">
-    <img class="user_avatar rounded-circle" src="/storage/profile_images/{{$user->avatar}}">
-    <!-- <div>{{$user->name}}</div> -->
+    <a href="/user/{{$user->id}}">
+      <img class="user_avatar rounded-circle" src="/storage/profile_images/{{$user->avatar}}">
+      <!-- <div>{{$user->name}}</div> -->
+    </a>
   </div>
   @endforeach
 </div>
