@@ -1,4 +1,6 @@
 # RyuStagram  
+<img width="1440" alt="スクリーンショット 2019-09-17 23 07 34" src="https://user-images.githubusercontent.com/41050625/65049498-cdaa5e00-d9a0-11e9-9197-a22632cddcfd.png">
+
 [リンク先](https://team-lab.github.io/skillup/step2/03-laravel-demo.html)で書かれているような内容を元にlaravelの勉強がてら何か作ってみます。   
 
 # Laravel  
